@@ -1,9 +1,15 @@
-import json, config
+# You need to create a config.py file in the app root directory
+# defining the following variables:
+#
+# STRAVA_USR = "<YOUR_STRAVA_USERNAME>"
+# STRAVA_PWD = "<YOUR_STRAVA_PASSWORD>"
+#
+import config 
+import json
 from flask import Flask, render_template, request, make_response
 from urllib.parse import quote, unquote
 
 from stravaheatmap.cartograph.onlinemap import OnlineMap
-
 
 app = Flask(__name__)
 
